@@ -1,0 +1,9 @@
+.body {
+  @media (min-width:550px){
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    margin: 1vw;
+  }
+}

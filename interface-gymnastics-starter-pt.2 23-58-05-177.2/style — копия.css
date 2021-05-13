@@ -1,0 +1,134 @@
+/* welcome to the style file of this project! */
+* {
+  -webkit-transition: all ease .2s;
+  transition: all ease .2s;
+  position: absolute;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  background-color: deeppink;
+  top: 200px;
+  left: -100px;
+  border-radius: 50%;
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+}
+
+html, body, .grid-container {
+  height: 100%;
+  margin: 0;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr (1fr 0.5fr 1.5fr)[2] (1fr)[2] 2fr 0.2fr;
+      grid-template-columns: 1fr repeat(2, 1fr 0.5fr 1.5fr) repeat(2, 1fr) 2fr 0.2fr;
+  -ms-grid-rows: (1fr)[3] 1.1fr (1fr)[6];
+      grid-template-rows: repeat(3, 1fr) 1.1fr repeat(6, 1fr);
+  gap: 10px 10px;
+      grid-template-areas: ". picture-1 picture-1 picture-1 picture-1 . . . . . ." ". picture-1 picture-1 picture-1 picture-1 . . . . . ." ". picture-1 picture-1 picture-1 picture-1 . picture-2 picture-2 picture-2 . ." ". . . picture-3 picture-3 . picture-2 picture-2 picture-2 . ." ". . . picture-3 picture-3 . . picture-4 picture-4 picture-4 ." ". . picture-5 picture-5 picture-5 picture-5 picture-5 picture-4 picture-4 picture-4 ." ". . picture-5 picture-5 picture-5 picture-5 picture-5 picture-4 picture-4 picture-4 ." ". . picture-5 picture-5 picture-5 picture-5 picture-5 . . . ." ". . . . . . . . . . ." ". . . . . . . . . . .";
+}
+
+.picture-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-area: picture-1;
+}
+
+.picture-3 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: picture-3;
+}
+
+.picture-2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  grid-area: picture-2;
+}
+
+.picture-4 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 3;
+  grid-area: picture-4;
+}
+
+.picture-5 {
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
+  grid-area: picture-5;
+}
+
+@media all and (-ms-high-contrast: none) {
+  .grid-container {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr repeat(2, 1fr 0.5fr 1.5fr) repeat(2, 1fr) 2fr 0.2fr;
+    -ms-grid-rows: repeat(3, 1fr) 1.1fr repeat(6, 1fr);
+  }
+  .picture-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+  }
+  .picture-3 {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+  }
+  .picture-2 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+  }
+  .picture-4 {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 8;
+    -ms-grid-column-span: 3;
+  }
+  .picture-5 {
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 5;
+  }
+}
+
+/* For presentation only, no need to copy the code below */
+.grid-container * {
+  border: 1px solid red;
+  position: relative;
+}
+
+.grid-container *:after {
+  content: attr(class);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=style — копия.css.map */
